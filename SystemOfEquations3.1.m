@@ -35,3 +35,15 @@ fprintf('y = %.3fx^2 + %.3fx + %.3f\n',a,b,c)
 x = -10:0.1:10;
 y = a*x.^2 + b*x + c;
 
+plot(x,y,"LineWidth",12)
+hold on
+grid on
+plot([x1 x2 x3], [y1 y2 y3], 'ro','MarkerSize',8,'LineWidth',2)
+
+title('Parabola Through User-Entered Points');
+xlabel('x')
+ylabel('y')
+legend('Parabola','Coordinate Points','Location','best')
+
+
+
