@@ -18,14 +18,3 @@ newlogo(:,:,3) = blue;
 % Display the new img
 subplot(2,2,2)
 imshow(newlogo)
-% White pixels changed to a different color
-white = red>240 & green>240 & blue>240;
-red(white) = 10;
-green(white) = 20;
-blue(white) = 204;
-newlogo(:,:,1) = red;
-newlogo(:,:,2) = green;
-newlogo(:,:,3) = blue;
-% Display the new img
-subplot(2,2,3)
-imshow(newlogo)
