@@ -12,11 +12,19 @@ white = logo(:,:,3);
 % Using subplot to show images
 subplot(2,2,1)
 imshow(img);
-% Modify the black colors
+% Modify the black color
 black = red<50 & green<50 & blue<50;
 red(black) = 255;
-green(black) = 0;
-blue(black) = 0;
+green(black) = 67;
+blue(black) = 150;
 newlogo(:,:,1) = black;
 newlogo(:,:,2) = green;
 newlogo(:,:,3) = white;
+% White pixels
+white = red>240 & green>240 & blue>240;
+red(white) = 10;
+green(white) = 20;
+blue(white) = 204;
+newlogo(:,:,1) = red;
+newlogo(:,:,2) = green;
+newlogo(:,:,3) = blue;
