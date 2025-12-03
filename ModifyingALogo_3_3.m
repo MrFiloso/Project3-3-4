@@ -6,7 +6,7 @@ img = imread("Screenshot(3).jpg");
 figure;
 title('Original Monster Logo');
 % Save the three layers of the array to three dimensional array
-black1 = logo(:,:,1);
+red = logo(:,:,1);
 green = logo(:,:,2);
 white = logo(:,:,3);
 % Using subplot to show images
@@ -20,6 +20,9 @@ blue(black) = 150;
 newlogo(:,:,1) = black;
 newlogo(:,:,2) = green;
 newlogo(:,:,3) = white;
+% Display the new age
+subplot(2,2,2)
+imshow(newlogo)
 % White pixels
 white = red>240 & green>240 & blue>240;
 red(white) = 10;
@@ -28,3 +31,6 @@ blue(white) = 204;
 newlogo(:,:,1) = red;
 newlogo(:,:,2) = green;
 newlogo(:,:,3) = blue;
+% Display the new age
+subplot(2,2,3)
+imshow(newlogo)
