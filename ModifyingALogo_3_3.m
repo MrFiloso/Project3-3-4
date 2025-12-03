@@ -6,10 +6,14 @@ img = imread("Screenshot(3).jpg");
 figure;
 title('Original Monster Logo');
 imshow(img);
-% Save the three layers of the array to three dimensional array
-red= logo(:,:,1);
-green = logo(:,:,2);
-white = logo(:,:,3);
+% Modify the Monster Logo
+img_mod = img;
+% Defining the RGB values
+black= [0, 0, 0];
+green = [124, 252, 0];
+white = [255, 255, 255];
+% Using a for loop to cycle through colors
+
 % Using subplot to show images
 subplot(2,2,1)
 imshow(img);
