@@ -27,7 +27,7 @@ c = coeff(3);
 
 %• Display the equation for that parabola on the screen
 fprintf('\nThe Parabola Equation through those 3 points is:\n')
-fprintf('y = %.3fx^2 + %.3fx + %.3f\n',a,b,c)
+fprintf('y = %.1fx^2 + %.1fx + %.1f\n',a,b,c)
 
 %• Graph the parabola AND the three points that the user entered on the same 
 % plot for values of x from -10 to 10. Include a title and grid for the plot
@@ -35,7 +35,7 @@ fprintf('y = %.3fx^2 + %.3fx + %.3f\n',a,b,c)
 x = -10:0.1:10;
 y = a*x.^2 + b*x + c;
 
-plot(x,y,"LineWidth",12)
+plot(x,y,"LineWidth",2)
 hold on
 grid on
 plot([x1 x2 x3], [y1 y2 y3], 'ro','MarkerSize',8,'LineWidth',2)
