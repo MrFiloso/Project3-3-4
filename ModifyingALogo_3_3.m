@@ -1,12 +1,12 @@
 % Using a script to change the colors on the monster logo
 logo = imread("Screenshot(3).jpg");
-% Save the three layera of the array to three dimensional array
+% Save the three layers of the array to three dimensional array
 red = logo(:,:,1);
 green = logo(:,:,2);
 % Using subplot to show images
 subplot(2,2,1)
 imshow("Screenshot(3).jpg")
-% Modify the logo
+% Modify the logo black to yellow
 black = red<100 & green<100 & blue<100;
 red(black) = 255;
 green(black) = 200;
