@@ -6,3 +6,7 @@ img = imread("Screenshot(3).jpg");
 figure;
 imshow(img);
 title('Original Monster Logo');
+% Save the three layers of the array to three dimensional array
+black = logo(:,:,1);
+green = logo(:,:,2);
+white = logo(:,:,3);
